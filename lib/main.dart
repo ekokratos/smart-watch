@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+enum Screen { message, music, timer }
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -19,6 +21,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int state = 0;
+
+  Screen selectedScreen = Screen.message;
 
   switchScreen() {
     switch (state) {
@@ -123,25 +127,40 @@ class _MyHomePageState extends State<MyHomePage> {
                         IconButton(
                             icon: Icon(
                               Icons.message,
-                              color: Colors.white,
+                              color: selectedScreen == Screen.message
+                                  ? Colors.blueAccent
+                                  : Colors.white,
                             ),
                             onPressed: () {
                               setState(() {
                                 state = 0;
+                                selectedScreen = Screen.message;
                               });
                             }),
                         IconButton(
-                            icon: Icon(Icons.music_note, color: Colors.white),
+                            icon: Icon(
+                              Icons.music_note,
+                              color: selectedScreen == Screen.music
+                                  ? Colors.blueAccent
+                                  : Colors.white,
+                            ),
                             onPressed: () {
                               setState(() {
                                 state = 1;
+                                selectedScreen = Screen.music;
                               });
                             }),
                         IconButton(
-                            icon: Icon(Icons.timer, color: Colors.white),
+                            icon: Icon(
+                              Icons.timer,
+                              color: selectedScreen == Screen.timer
+                                  ? Colors.blueAccent
+                                  : Colors.white,
+                            ),
                             onPressed: () {
                               setState(() {
                                 state = 2;
+                                selectedScreen = Screen.timer;
                               });
                             })
                       ],
