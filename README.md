@@ -33,4 +33,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Steps to Run
 **In Android Studio**: *Run* -> *Run main.dart*  OR  press  *Shift+F10*  
-**In VSCode**: press *F5* 
+**In VSCode**: *Debug* -> *Start debuging* OR  press *F5* 
