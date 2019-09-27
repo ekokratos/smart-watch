@@ -1,6 +1,6 @@
 # smart_watch
 
-A new Flutter application.
+This project is built using [*FLUTTER*](https://flutter.dev/)
 
 ## Getting Started
 
@@ -14,3 +14,13 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+# TASK 1
+*In Messages, the user should be able to browse through the stored messages. (1) They should be able to swipe through the messages to browse their messages, and (2) tap (click) on them to read the content.*
+
+# Task 2
+*In Music Player, the user should be able to control the music. (1) The user should be able to browse the Spotify playlist, and (2) control the player using the play/ pause, previous, and next buttons.*
+
+# Task 3
+*In Timer, the user should be able to record lap timings. (1) The user should be able to record multiple lap timings, and (2) reset the timer to its default state.*
