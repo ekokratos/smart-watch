@@ -55,11 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.black,
             ),
           ),
-          child: Center(
-              child: const Text(
-            'Music',
-            textAlign: TextAlign.center,
-          )),
+          child: MusicPlayer(),
         );
       case 2:
         return Container(
@@ -179,7 +175,7 @@ class _StopWatchState extends State<StopWatch> {
   Stopwatch watch = new Stopwatch();
 
   Timer timer;
-  List<Text> laps=[];
+  List<Text> laps = [];
   String elapsedTime = '00:00';
 
   updateTime(Timer timer) {
@@ -203,26 +199,23 @@ class _StopWatchState extends State<StopWatch> {
       children: <Widget>[
         Positioned(
             left: 70,
-            top:20,
+            top: 20,
             child: Text(elapsedTime,
                 style: new TextStyle(fontSize: 25.0, color: Colors.white))),
-         Center(
-           child: Container(
+        Center(
+          child: Container(
               height: 100,
               width: 100,
-              child:Align(
+              child: Align(
                 alignment: Alignment.topCenter,
                 child: ListView.builder(
                   itemCount: laps.length,
-                  itemBuilder: (context,index){
+                  itemBuilder: (context, index) {
                     return laps[index];
                   },
                 ),
-              )
-            ),
-         ),
-        
-
+              )),
+        ),
         Positioned(
           left: 30,
           bottom: 10,
@@ -264,11 +257,10 @@ class _StopWatchState extends State<StopWatch> {
 
   stopWatch() {
     setState(() {
-            laps.add(Text("${laps.length+1}. ${elapsedTime}",
+      laps.add(Text("${laps.length + 1}. ${elapsedTime}",
           style: new TextStyle(fontSize: 15.0, color: Colors.white)));
-          print(laps);
+      print(laps);
     });
-
   }
 
   resetWatch() {
@@ -391,5 +383,50 @@ class MessageDisply extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class MusicPlayer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Text(
+          "Senorita",
+          style: TextStyle(
+              fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        Text(
+          "by Shawn Mendes",
+          style: TextStyle(
+              fontSize: 15, color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.chevron_left,
+                color: Colors.white,
+              ),
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.play_circle_outline,
+                color: Colors.white,
+              ),
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.chevron_right,
+                color: Colors.white,
+              ),
+            )
+          ],
+        )
+      ],
+    ));
   }
 }
