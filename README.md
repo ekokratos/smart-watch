@@ -20,8 +20,8 @@ samples, guidance on mobile development, and a full API reference.
 
 # TASK 1
 *In Messages, the user should be able to browse through the stored messages. (1) They should be able to swipe through the messages to browse their messages, and (2) tap (click) on them to read the content.*
-<div style="display:block;margin:auto;height:80%;width:80%">
-  <img src="creation_of_moon.gif">
+<div >
+  <img src="message.jpeg" heigth="50">
 </div>
 
 # TASK 2
@@ -29,6 +29,9 @@ samples, guidance on mobile development, and a full API reference.
 
 # TASK 3
 *In Timer, the user should be able to record lap timings. (1) The user should be able to record multiple lap timings, and (2) reset the timer to its default state.*
+<div>
+  <img src="timmer.jpeg">
+</div>
 
 
 ## Steps to Run
